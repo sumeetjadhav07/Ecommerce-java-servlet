@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>com.learn</groupId>
+  <artifactId>mycart</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>JavaDart Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <dependencies>
+    <!-- JUnit for testing -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.1</version>
+      <scope>test</scope>
+    </dependency>
+
+   
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.4.2.Final</version> <!-- Update to a newer version if needed -->
+    </dependency>
+
+    
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.26</version> <!-- Ensure the version matches your MySQL version -->
+    </dependency>
+
+    <!-- Servlet API (For Jakarta EE 9+, use javax.servlet-api 5.x) -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version> <!-- Use 5.0.0 for Jakarta EE 9+ -->
+      <scope>provided</scope>
+    </dependency>
+
+  </dependencies>
+
+  <!-- Build configuration -->
+  <build>
+    <finalName>mycart</finalName>
+    
+    <!-- Maven Compiler Plugin (set Java version) -->
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version> <!-- Use an appropriate version -->
+        <configuration>
+          <source>1.8</source> <!-- Set source Java version -->
+          <target>1.8</target> <!-- Set target Java version -->
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
